@@ -21,7 +21,7 @@ SRC_URI = "git://github.com/troglobit/sysklogd.git;nobranch=1 \
            "
 S = "${WORKDIR}/git"
 
-EXTRA_OECONF = "--with-systemd=${systemd_system_unitdir} --with-klogd --without-logger"
+EXTRA_OECONF = "--with-systemd=${systemd_system_unitdir} --with-klogd --with-klogd-delay=1 --without-logger"
 
 do_install_append () {
        install -d ${D}${sysconfdir}
